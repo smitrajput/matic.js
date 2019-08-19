@@ -5,15 +5,13 @@ const figlet = require("figlet")
 const chalk = require("chalk");
 const ora = require('ora');
 
-console.log(chalk.yellow(
-  figlet.textSync('storj-pay', { horizontalLayout: 'full' })
-))
+
 console.log("-----------------------------------------------------------------------------------")
 console.log(chalk.bold.cyanBright('DEPOSITING STORJ TOKENS TO MATIC-CHAIN'));
 console.log("-----------------------------------------------------------------------------------")
 
 const token = config.ROPSTEN_TEST_TOKEN // test token address
-const amount = '4000000000000000000' // amount in wei
+const amount = '10000000000000000000' // amount in wei
 const from = config.FROM_ADDRESS // from address
 
 // Create object of Matic

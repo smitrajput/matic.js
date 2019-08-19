@@ -23,7 +23,7 @@ const recipientArray = [
 
 const token = config.MATIC_TEST_TOKEN // test token address
 const tokenMain = config.ROPSTEN_TEST_TOKEN
-const amount = '200000000000000000' // amount in wei
+const amount = '1000000000000000000' // amount in wei
 
 // Create object of Matic
 const matic = new Matic({
@@ -37,15 +37,20 @@ const matic = new Matic({
 matic.wallet = config.PRIVATE_KEY // prefix with `0x`
 
 // Send Tokens
-for (const recipient of recipientArray) {
-  matic.transferTokens(token, recipient, amount, {
-    from,
-    // parent: true, // For token transfer on Main network (false for Matic Network)
-    onTransactionHash: (hash) => {
-      // action on Transaction success
-      console.log(chalk.bold.white("Recipient:\t\t", recipient))
-      console.log(chalk.bold.white("Transaction hash:\t", hash)) // eslint-disable-line
-      console.log("-----------------------------------------------------------------------------------------------")
-    },
-  })
+async function transfer() {
+  for (let i = 0; i < 10; i++) {
+    await matic.transferTokens(token, recipientArray[i], amount, {
+      from,
+      // parent: true, // For token transfer on Main network (false for Matic Network)
+      onTransactionHash: (hash) => {
+        // action on Transaction success
+        console.log(chalk.bold.white("Recipient:\t\t", recipientArray[i]))
+        console.log(chalk.bold.white("Transaction hash:\t", hash)) // eslint-disable-line
+        console.log("-----------------------------------------------------------------------------------------------")
+      },
+    })
+  }
 }
+
+transfer();
+

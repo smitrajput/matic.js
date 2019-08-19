@@ -3,7 +3,7 @@ const config = require('./config')
 const chalk = require("chalk");
 
 const token = config.MATIC_TEST_TOKEN // test token address
-const amount = '100' // amount in wei
+const amount = '1000000000000000000' // amount in wei
 const from = '0x731dE857EaF204DC4AEB81760B170a14bFF2f696' // from address
 
 // Create object of Matic

@@ -9,8 +9,8 @@ module.exports = {
   WATCHER_URL: 'https://ropsten-watcher2.api.matic.network/api/v1', // Backend service which syncs the Matic Plasma contract events on Ethereum mainchain to a MySQL database which we use for faster querying. This comes in handy especially for listening to asset deposits on the Plasma contract. 
   ROOTWETH_ADDRESS: '0x421dc9053cb4b51a7ec07b60c2bbb3ec3cfe050b',  // This is a wrapped ETH ERC20 contract address so that we can support ETH deposits to the sidechain 
   MATICWETH_ADDRESS: '0x31074c34a757a4b9FC45169C58068F43B717b2D0', // The corresponding wrapped ETH ERC20 contract address on the Matic chain 
-  PRIVATE_KEY: '', // Storj satellite node private key
-  FROM_ADDRESS: '',// Storj satellite node address 
+  PRIVATE_KEY: '0xD399DAEC16B07397B4A476EF6835CFABAFF0774A3B531E51D881CA769E588429', // Storj satellite node private key
+  FROM_ADDRESS: '0xD43541554551Fb3fBB472a4c295a5d6C6B8fa5dd',// Storj satellite node address 
   ROPSTEN_TEST_TOKEN: '0x70459e550254b9d3520a56ee95b78ee4f2dbd846', // Contract for ERC20 in Ropsten
   MATIC_TEST_TOKEN: '0xc82c13004c06E4c627cF2518612A55CE7a3Db699', // Contract for ERC20 in Matic testnet
   ROPSTEN_ERC721_TOKEN: '0x07d799252cf13c01f602779b4dce24f4e5b08bbd', // Contract for ERC721 in Ropsten testnet

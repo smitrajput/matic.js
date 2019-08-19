@@ -30,7 +30,7 @@ const recipientArray = [
 ] // Storage node addresses
 
 console.log("-----------------------------------------------------------------------------------")
-console.log(chalk.bold.cyanBright("MATIC-CHAIN BALANCES"))
+console.log(chalk.bold.cyanBright("MATIC-CHAIN BALANCES OF STORAGE NODES (in MATIC-TEST)"))
 console.log("-----------------------------------------------------------------------------------")
 for (const recipient of recipientArray) {
     matic.balanceOfERC20(recipient, tokenAddress, {

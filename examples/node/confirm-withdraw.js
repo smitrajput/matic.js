@@ -1,7 +1,7 @@
 const Matic = require('maticjs').default
 const config = require('./config')
 
-const from = '0xbAe664A51Bf25898bC587F8A1C650bebC2EF4CF3' // from address
+const from = '0x731dE857EaF204DC4AEB81760B170a14bFF2f696' // from address
 
 // Create object of Matic
 const matic = new Matic({
@@ -13,9 +13,9 @@ const matic = new Matic({
    withdrawManagerAddress: config.WITHDRAWMANAGER_ADDRESS,
 })
 
-matic.wallet = '0x32171443ED60EC782E2C54F68C1003FBB09A502A78F5DEC2173E0C6FECE0EF65' // prefix with `0x`
+matic.wallet = '0x651F5C24E56FE911A9E181D1AA3567D8B9186DBE863540EB90CAEC2F18EF9BD9' // prefix with `0x`
 
-var transactionHash = '0xb7f43f1d666907c7e73dae5503f59c7d84aebd834feddd7e1688b429b01d2689' // Insert txHash generated from initiate-withdraw.js 
+var transactionHash = '0xa165617d9b964a4c90f19a43a0245e5e4f0e5a1100cc27c31aafd37e5af9d03a' // Insert txHash generated from initiate-withdraw.js 
 
 //Wait for 5 mins till the checkpoint is submitted, then run the confirm withdraw
 matic.withdraw(transactionHash, {
