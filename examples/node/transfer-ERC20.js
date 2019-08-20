@@ -4,7 +4,7 @@ const chalk = require("chalk");
 const ora = require('ora');
 
 console.log("-----------------------------------------------------------------------------------")
-console.log(chalk.bold.cyanBright('TRANSFERRING 4 STORJ-MATIC TOKENS EACH TO 10 STORAGE NODES ON MATIC-CHAIN'));
+console.log(chalk.bold.cyanBright('TRANSFERRING STORJ-MATIC TOKENS EACH TO STORAGE NODES ON MATIC-CHAIN'));
 console.log("-----------------------------------------------------------------------------------")
 
 const from = config.FROM_ADDRESS // from address
