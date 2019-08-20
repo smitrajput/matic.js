@@ -38,7 +38,7 @@ for (const recipient of recipientArray) {
     from: recipient
   }).then((balance) => {
     // action on Transaction success
-    console.log(chalk.bold.white(recipient + "\t" + balance)) // eslint-disable-line
+    console.log(chalk.bold.white(recipient + "\t" + (balance / Math.pow(10, 18)).toFixed(3))) // eslint-disable-line
   })
 }
 

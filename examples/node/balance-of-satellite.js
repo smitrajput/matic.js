@@ -27,7 +27,7 @@ matic.balanceOfERC20(from, ropstenTokenAddress, {
     from: from
 }).then((balance) => {
     // action on Transaction success
-    console.log(chalk.bold.white("Main-Chain balance of " + from + ":\t" + balance)) // eslint-disable-line
+    console.log(chalk.bold.white("Main-Chain balance of " + from + ":\t" + (balance / Math.pow(10, 18)).toFixed(3))) // eslint-disable-line
 })
 
 
@@ -36,7 +36,7 @@ matic.balanceOfERC20(from, maticTokenAddress, {
     from: from
 }).then((balance) => {
     // action on Transaction success
-    console.log(chalk.bold.white("Matic-Chain balance of " + from + ":\t" + balance)) // eslint-disable-line
+    console.log(chalk.bold.white("Matic-Chain balance of " + from + ":\t" + (balance / Math.pow(10, 18)).toFixed(3))) // eslint-disable-line
 })
 
 
